@@ -67,7 +67,15 @@ dbt docs generate --project-dir dbt --profiles-dir dbt
 dbt docs serve --project-dir dbt --profiles-dir dbt   # lineage at localhost:8080
 
 streamlit run dashboard/app.py          # gold layer only
+python -m src.export_marts             # publish gold marts as CSVs (CI does this too)
 ```
+
+**Deploying the dashboard?** `warehouse/*.duckdb` is gitignored (it is a build
+artifact), so Streamlit Community Cloud would never see it. CI exports the
+dashboard's gold marts to `dashboard/data/*.csv` and commits them back with
+`[skip ci]`; the app reads CSVs when the warehouse is absent and the live
+warehouse when present. Connect the repo on
+[share.streamlit.io](https://share.streamlit.io) and it just works.
 
 ## dbt project tour
 
