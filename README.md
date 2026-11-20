@@ -2,6 +2,7 @@
 
 [![ELT pipeline](https://github.com/Abdelrahman-0-20/energy-analytics-dbt/actions/workflows/ci.yml/badge.svg)](https://github.com/Abdelrahman-0-20/energy-analytics-dbt/actions/workflows/ci.yml)
 [![dbt docs](https://img.shields.io/badge/docs-dbt%20lineage-blue)](https://abdelrahman-0-20.github.io/energy-analytics-dbt/)
+[![Live demo](https://img.shields.io/badge/live%20demo-streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://energy-analytics-dbt-pactrkas7ao69jwbh6ykhg.streamlit.app)
 
 Project #3 of a [data engineering portfolio](https://github.com/Abdelrahman-0-20/api-ingestion-pipeline)
 (companions: [API ingestion pipeline](https://github.com/Abdelrahman-0-20/api-ingestion-pipeline) ·
@@ -69,6 +70,8 @@ dbt docs serve --project-dir dbt --profiles-dir dbt   # lineage at localhost:808
 streamlit run dashboard/app.py          # gold layer only
 python -m src.export_marts             # publish gold marts as CSVs (CI does this too)
 ```
+
+**Live demo:** [energy-analytics-dbt-pactrkas7ao69jwbh6ykhg.streamlit.app](https://energy-analytics-dbt-pactrkas7ao69jwbh6ykhg.streamlit.app)
 
 **Deploying the dashboard?** `warehouse/*.duckdb` is gitignored (it is a build
 artifact), so Streamlit Community Cloud would never see it. CI exports the
