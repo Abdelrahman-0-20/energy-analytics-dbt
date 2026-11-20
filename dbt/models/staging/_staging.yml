@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_energy
+    description: "One row per entity-year: the 14 headline metrics + 9 sources x 4 metric families, typed and renamed."
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [entity_name, year]
+    columns:
+      - name: entity_name
+        description: "Entity (country / historical state / aggregate). Part of the natural key."
+        data_tests:
+          - not_null
+      - name: year
+        description: "Observation year, 1900-2025. Part of the natural key."
+        data_tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              # column-level: dbt_utils prefixes the column name, so this is a fragment
+              arguments:
+                expression: ">= {{ var('first_energy_year') }}"
+      - name: iso_code
+        description: "ISO 3166-1 alpha-3; NULL for aggregates and historical states."
+      - name: population
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "is null or population > 0"
+
+  - name: stg_countries
+    description: "ISO 3166 entities with UN M49 region/sub-region — reference data for dimensions."
+    columns:
+      - name: country_name
+        data_tests:
+          - not_null
+          - unique
+      - name: iso_alpha3
+        description: "ISO 3166-1 alpha-3 code. Two reference rows (Antarctica, Taiwan) have a region of NULL — see the vetted-allow-list test."
+        data_tests:
+          - not_null
+          - unique

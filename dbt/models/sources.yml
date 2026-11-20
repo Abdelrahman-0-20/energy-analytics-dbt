@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: raw
+    description: >
+      Raw layer — faithful CSV copies loaded by src.pipeline. Never transformed
+      in place; every table is rebuilt with CREATE OR REPLACE from the pinned
+      files on disk, so re-runs are byte-identical.
+    schema: main
+    tables:
+      - name: raw_energy
+        description: "OWID energy dataset (pinned release): 314 entities x 130 metric columns, 1900-2025."
+        loaded_at_field: _ingested_at
+        freshness:
+          warn_after: {count: 7, period: day}
+          error_after: {count: 30, period: day}
+        columns:
+          - name: country
+            description: "Entity name — country, historical state, or aggregate (World, regions, income groups)."
+          - name: year
+            description: "Calendar year of the observation. Natural key part 1 of 2."
+          - name: iso_code
+            description: "ISO 3166-1 alpha-3. NULL for aggregates and historical states."
+      - name: raw_countries
+        description: "ISO 3166 with UN M49 regions — reference data for the dimension tables."
+        loaded_at_field: _ingested_at
+        freshness:
+          warn_after: {count: 30, period: day}
+          error_after: {count: 90, period: day}

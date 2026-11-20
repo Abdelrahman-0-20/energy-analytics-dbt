@@ -1,0 +1,10 @@
+# Committed on purpose: a zero-ops project should run with no setup beyond
+# pip install. DBT_PROFILES_DIR=dbt is how CI points dbt at this file.
+energy_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('DUCKDB_PATH', 'warehouse/energy.duckdb') }}"
+      schema: main
+      threads: 4

@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+  - name: energy_dashboard
+    type: dashboard
+    label: Energy Dashboard
+    description: >
+      Streamlit dashboard over the gold marts only: latest country snapshot,
+      renewable transition, and long-form energy mix. Never reads staging or
+      raw tables.
+    depends_on:
+      - ref('mart_energy_snapshot')
+      - ref('mart_renewable_transition')
+      - ref('mart_energy_mix')
+    owner:
+      name: Abdelrahman
+      email: 152013772+Abdelrahman-0-20@users.noreply.github.com
+    tags: [portfolio]

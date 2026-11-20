@@ -1,0 +1,149 @@
+version: 2
+
+models:
+  - name: dim_entities
+    description: "All 314 OWID entities classified as country / historical_state / aggregate, enriched with UN M49 regions."
+    columns:
+      - name: entity_name
+        description: "Natural key of the model and of every fact row."
+        data_tests:
+          - not_null
+          - unique
+      - name: entity_type
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['country', 'historical_state', 'aggregate']
+      - name: is_aggregate
+        description: "True for World / continents / income groups — filter these out before summing across entities."
+        data_tests:
+          - dbt_utils.expression_is_true:
+              # column-level fragment: renders as not(is_aggregate = (...))
+              arguments:
+                expression: "= (entity_type = 'aggregate')"
+
+  - name: dim_years
+    description: "Year spine 1900 .. latest year loaded, with a decade axis for trend models."
+    columns:
+      - name: year
+        data_tests:
+          - not_null
+          - unique
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: ">= {{ var('first_energy_year') }}"
+      - name: decade
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "= year - (year % 10)"
+
+  - name: fct_energy_year
+    description: "Grain: entity x year. Incremental merge on entity_year_sk; gold consumers read only this layer."
+    columns:
+      - name: entity_year_sk
+        description: "Surrogate key (dbt_utils): md5(entity_name || year)."
+        data_tests:
+          - not_null
+          - unique
+      - name: entity_name
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_entities')
+                field: entity_name
+      - name: year
+        data_tests:
+          - not_null
+      - name: region
+        description: "NULL only for entities the UN M49 does not classify (Antarctica, Taiwan) — see assert_vetted_unclassified_countries."
+      - name: primary_energy_consumption
+        description: "TWh. Reconciles with the sum of the nine source consumptions within the configured tolerance (see assert_energy_shares_reconcile)."
+        data_tests:
+          - expect_value_between:
+              arguments:
+                min_value: 0
+      - name: renewables_share_energy
+        description: "% of primary energy from renewables."
+        data_tests:
+          - expect_value_between:
+              arguments:
+                min_value: 0
+                max_value: 100
+      - name: fossil_share_energy
+        data_tests:
+          - expect_value_between:
+              arguments:
+                min_value: 0
+                max_value: 100
+      - name: low_carbon_share_energy
+        data_tests:
+          - expect_value_between:
+              arguments:
+                min_value: 0
+                max_value: 100
+
+  - name: mart_energy_mix
+    description: "Long form: entity x year x source with TWh and share metrics — base for stacked charts."
+    columns:
+      - name: entity_year_source_sk
+        data_tests:
+          - not_null
+          - unique
+      - name: energy_source
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [coal, oil, gas, nuclear, hydro, wind, solar, biofuel, other_renewable]
+      - name: share_of_energy_pct
+        data_tests:
+          - expect_value_between:
+              arguments:
+                min_value: 0
+                max_value: 100
+      - name: consumption_twh
+        data_tests:
+          - expect_value_between:
+              arguments:
+                min_value: 0
+
+  - name: mart_renewable_transition
+    description: "Per country: renewables share at first observation vs latest, change in percentage points, rank."
+    columns:
+      - name: entity_name
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('dim_entities')
+                field: entity_name
+      - name: latest_renewables_share_pct
+        data_tests:
+          - expect_value_between:
+              arguments:
+                min_value: 0
+                max_value: 100
+      - name: baseline_year
+        data_tests:
+          - not_null
+
+  - name: mart_energy_snapshot
+    description: "Latest available year per country: headline metrics plus a per-capita energy rank (dashboard table)."
+    columns:
+      - name: entity_name
+        data_tests:
+          - not_null
+          - unique
+      - name: latest_year
+        data_tests:
+          - not_null
+      - name: energy_per_capita
+        description: "kWh per person (OWID unit)."
+        data_tests:
+          - expect_value_between:
+              arguments:
+                min_value: 0

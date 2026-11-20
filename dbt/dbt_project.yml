@@ -1,0 +1,44 @@
+name: energy_analytics
+version: "1.0.0"
+config-version: 2
+profile: energy_analytics
+require-dbt-version: [">=1.12.0", "<2.0.0"]   # arguments:/data_tests: schema style
+
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+vars:
+  # Curated classification lists — upstream ships no entity_type, so these
+  # lists are data, not code (tune here without touching any SQL).
+  historical_states:
+    - USSR
+    - Yugoslavia
+    - Czechoslovakia
+    - East Germany
+    - West Germany
+    - Serbia and Montenegro
+  sovereign_without_iso:
+    - Kosovo          # ISO does not assign Kosovo an alpha-3 code
+  retired_iso_codes:
+    - ANT             # Netherlands Antilles, withdrawn from ISO 3166-1 in 2010
+  first_energy_year: 1900
+  reconcile_tolerance_pct: 5   # measured: min 95.6%, max 102.9%, 0 outliers in 6,379 rows
+  min_countries: 200           # measured: 220 distinct countries on the pinned release
+
+models:
+  energy_analytics:
+    +persist_docs:
+      relation: true
+      columns: true
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts
+      fct_energy_year:
+        +materialized: incremental
