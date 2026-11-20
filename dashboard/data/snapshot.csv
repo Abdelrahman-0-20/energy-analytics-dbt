@@ -1,0 +1,222 @@
+country,iso_code,region,sub_region,latest_year,population,gdp,primary_energy_twh,kwh_per_person,renewables_pct,fossil_pct,energy_per_capita_rank
+Iceland,ISL,Europe,Northern Europe,2024,393404.0,,62.8,159676.0,80.5,19.5,1
+United Arab Emirates,ARE,Asia,Western Asia,2024,11027135.0,,1522.0,138026.0,2.5,91.0,2
+United States Virgin Islands,VIR,Americas,Latin America and the Caribbean,2023,85712.0,,9.7,113334.0,,,3
+Trinidad and Tobago,TTO,Americas,Latin America and the Caribbean,2024,1507778.0,,159.8,105988.0,0.0,100.0,4
+Saudi Arabia,SAU,Asia,Western Asia,2024,33962751.0,,3290.4,96883.0,0.7,99.3,5
+Faroe Islands,FRO,Europe,Northern Europe,2023,54738.0,,3.2,58450.0,,,6
+Turkmenistan,TKM,Asia,Central Asia,2024,7494494.0,,371.2,49525.0,0.0,100.0,7
+Falkland Islands,FLK,Americas,Latin America and the Caribbean,2023,3498.0,,0.2,44928.0,,,8
+Saint Pierre and Miquelon,SPM,Americas,Northern America,2023,5707.0,,0.2,43662.0,,,9
+Hong Kong,HKG,Asia,Eastern Asia,2024,7414914.0,,272.9,36809.0,1.0,99.0,10
+Venezuela,VEN,Americas,Latin America and the Caribbean,2024,28405544.0,,698.5,24592.0,25.8,74.2,11
+Niue,NIU,Oceania,Polynesia,2023,1841.0,,0.0,19803.0,,,12
+British Virgin Islands,VGB,Americas,Latin America and the Caribbean,2023,39009.0,,0.8,19623.0,,,13
+Algeria,DZA,Africa,Northern Africa,2024,46814302.0,,760.1,16237.0,0.2,99.8,14
+Iraq,IRQ,Asia,Western Asia,2024,46042015.0,,736.8,16002.0,0.6,99.4,15
+Ukraine,UKR,Europe,Eastern Europe,2024,37860221.0,,601.1,15876.0,8.3,70.0,16
+Dominica,DMA,Americas,Latin America and the Caribbean,2023,66531.0,,0.7,10663.0,,,17
+Indonesia,IDN,Asia,South-eastern Asia,2024,283487933.0,,2984.7,10529.0,11.0,89.0,18
+Saint Helena,SHN,Africa,Sub-Saharan Africa,2023,5316.0,,0.1,9813.0,,,19
+Micronesia (country),FSM,Oceania,Micronesia,2023,112646.0,,0.5,4428.0,,,20
+Vanuatu,VUT,Oceania,Melanesia,2023,320422.0,,1.2,3791.0,,,21
+Sao Tome and Principe,STP,Africa,Sub-Saharan Africa,2023,230882.0,,0.6,2601.0,,,22
+Comoros,COM,Africa,Sub-Saharan Africa,2023,850390.0,,1.8,2092.0,,,23
+Western Sahara,ESH,Africa,Northern Africa,2023,579734.0,,1.2,2020.0,,,24
+Central African Republic,CAF,Africa,Sub-Saharan Africa,2023,5152415.0,,1.4,280.0,,,25
+Martinique,MTQ,Americas,Latin America and the Caribbean,2023,346008.0,,0.0,0.0,,,26
+Northern Mariana Islands,MNP,Oceania,Micronesia,2023,45166.0,,0.0,0.0,,,26
+Reunion,REU,Africa,Sub-Saharan Africa,2023,874883.0,,0.0,0.0,,,26
+Guadeloupe,GLP,Americas,Latin America and the Caribbean,2023,376518.0,,0.0,0.0,,,26
+French Guiana,GUF,Americas,Latin America and the Caribbean,2023,303408.0,,0.0,0.0,,,26
+Tuvalu,TUV,Oceania,Polynesia,2023,9837.0,,0.0,0.0,,,26
+Brazil,BRA,Americas,Latin America and the Caribbean,2025,212812397.0,,,,,,32
+Yemen,YEM,Asia,Western Asia,2024,40583173.0,,,,,,32
+Grenada,GRD,Americas,Latin America and the Caribbean,2024,117218.0,,,,,,32
+Ireland,IRL,Europe,Northern Europe,2025,5308035.0,,,,,,32
+North Macedonia,MKD,Europe,Southern Europe,2025,1813792.0,,,,,,32
+Estonia,EST,Europe,Northern Europe,2025,1344236.0,,,,,,32
+Finland,FIN,Europe,Northern Europe,2025,5623328.0,,,,,,32
+Gambia,GMB,Africa,Sub-Saharan Africa,2024,2759999.0,,,,,,32
+Mauritius,MUS,Africa,Sub-Saharan Africa,2024,1271171.0,,,,,,32
+Namibia,NAM,Africa,Sub-Saharan Africa,2024,3030127.0,,,,,,32
+Tanzania,TZA,Africa,Sub-Saharan Africa,2024,68560162.0,,,,,,32
+Tunisia,TUN,Africa,Northern Africa,2025,12348576.0,,,,,,32
+Uganda,UGA,Africa,Sub-Saharan Africa,2024,50015091.0,,,,,,32
+Burundi,BDI,Africa,Sub-Saharan Africa,2024,14047788.0,,,,,,32
+Cuba,CUB,Americas,Latin America and the Caribbean,2024,10979781.0,,,,,,32
+Slovenia,SVN,Europe,Southern Europe,2025,2117070.0,,,,,,32
+South Korea,KOR,Asia,Eastern Asia,2025,51667035.0,,,,,,32
+Sudan,SDN,Africa,Northern Africa,2024,50448960.0,,,,,,32
+Cambodia,KHM,Asia,South-eastern Asia,2025,17847981.0,,,,,,32
+Armenia,ARM,Asia,Western Asia,2025,2952355.0,,,,,,32
+Azerbaijan,AZE,Asia,Western Asia,2025,10397712.0,,,,,,32
+Italy,ITA,Europe,Southern Europe,2025,59146263.0,,,,,,32
+Kenya,KEN,Africa,Sub-Saharan Africa,2025,57532491.0,,,,,,32
+Libya,LBY,Africa,Northern Africa,2024,7381029.0,,,,,,32
+Luxembourg,LUX,Europe,Western Europe,2025,680454.0,,,,,,32
+Mali,MLI,Africa,Sub-Saharan Africa,2024,24478597.0,,,,,,32
+Malta,MLT,Europe,Southern Europe,2025,545406.0,,,,,,32
+Brunei,BRN,Asia,South-eastern Asia,2024,462734.0,,,,,,32
+Mauritania,MRT,Africa,Sub-Saharan Africa,2024,5169403.0,,,,,,32
+Papua New Guinea,PNG,Oceania,Melanesia,2024,10576509.0,,,,,,32
+Poland,POL,Europe,Eastern Europe,2025,38140913.0,,,,,,32
+Puerto Rico,PRI,Americas,Latin America and the Caribbean,2025,3235290.0,,,,,,32
+Gibraltar,GIB,Europe,Southern Europe,2024,39351.0,,,,,,32
+Cape Verde,CPV,Africa,Sub-Saharan Africa,2024,524878.0,,,,,,32
+Djibouti,DJI,Africa,Sub-Saharan Africa,2024,1168726.0,,,,,,32
+Moldova,MDA,Europe,Eastern Europe,2025,2996104.0,,,,,,32
+Netherlands Antilles,ANT,,,2024,,,,,,,32
+New Zealand,NZL,Oceania,Australia and New Zealand,2025,5251897.0,,,,,,32
+Nicaragua,NIC,Americas,Latin America and the Caribbean,2024,6916136.0,,,,,,32
+Cote d'Ivoire,CIV,Africa,Sub-Saharan Africa,2024,31934229.0,,,,,,32
+Denmark,DNK,Europe,Northern Europe,2025,6002515.0,,,,,,32
+Slovakia,SVK,Europe,Eastern Europe,2025,5474874.0,,,,,,32
+Afghanistan,AFG,Asia,Southern Asia,2024,42647502.0,,,,,,32
+Argentina,ARG,Americas,Latin America and the Caribbean,2025,45851379.0,,,,,,32
+Kuwait,KWT,Asia,Western Asia,2025,5026079.0,,,,,,32
+Hungary,HUN,Europe,Eastern Europe,2025,9632286.0,,,,,,32
+Rwanda,RWA,Africa,Sub-Saharan Africa,2024,14256573.0,,,,,,32
+Saint Lucia,LCA,Americas,Latin America and the Caribbean,2024,179751.0,,,,,,32
+Oman,OMN,Asia,Western Asia,2025,5494696.0,,,,,,32
+Belize,BLZ,Americas,Latin America and the Caribbean,2024,417077.0,,,,,,32
+Bulgaria,BGR,Europe,Eastern Europe,2025,6714556.0,,,,,,32
+Canada,CAN,Americas,Northern America,2025,40126728.0,,,,,,32
+Cayman Islands,CYM,Americas,Latin America and the Caribbean,2024,74476.0,,,,,,32
+Greenland,GRL,Americas,Northern America,2024,55864.0,,,,,,32
+Guatemala,GTM,Americas,Latin America and the Caribbean,2024,18406366.0,,,,,,32
+Norway,NOR,Europe,Northern Europe,2025,5623074.0,,,,,,32
+Iran,IRN,Asia,Southern Asia,2025,92417684.0,,,,,,32
+Egypt,EGY,Africa,Northern Africa,2025,118365995.0,,,,,,32
+El Salvador,SLV,Americas,Latin America and the Caribbean,2025,6365506.0,,,,,,32
+France,FRA,Europe,Western Europe,2025,66650804.0,,,,,,32
+Guam,GUM,Oceania,Micronesia,2024,167790.0,,,,,,32
+Mozambique,MOZ,Africa,Sub-Saharan Africa,2024,34631767.0,,,,,,32
+Thailand,THA,Asia,South-eastern Asia,2025,71619866.0,,,,,,32
+Togo,TGO,Africa,Sub-Saharan Africa,2024,8406554.0,,,,,,32
+Turkey,TUR,Asia,Western Asia,2025,87685427.0,,,,,,32
+China,CHN,Asia,Eastern Asia,2025,1416096093.0,,,,,,32
+Ecuador,ECU,Americas,Latin America and the Caribbean,2025,18289898.0,,,,,,32
+Senegal,SEN,Africa,Sub-Saharan Africa,2024,18501988.0,,,,,,32
+Singapore,SGP,Asia,South-eastern Asia,2025,5870749.0,,,,,,32
+Suriname,SUR,Americas,Latin America and the Caribbean,2024,634438.0,,,,,,32
+Sweden,SWE,Europe,Northern Europe,2025,10656636.0,,,,,,32
+Albania,ALB,Europe,Southern Europe,2024,2791756.0,,,,,,32
+Antigua and Barbuda,ATG,Americas,Latin America and the Caribbean,2024,93782.0,,,,,,32
+Jamaica,JAM,Americas,Latin America and the Caribbean,2024,2839182.0,,,,,,32
+Macao,MAC,Asia,Eastern Asia,2024,720270.0,,,,,,32
+Maldives,MDV,Asia,Southern Asia,2024,527801.0,,,,,,32
+Paraguay,PRY,Americas,Latin America and the Caribbean,2025,7013079.0,,,,,,32
+Portugal,PRT,Europe,Southern Europe,2025,10411831.0,,,,,,32
+Qatar,QAT,Asia,Western Asia,2025,3115891.0,,,,,,32
+Romania,ROU,Europe,Eastern Europe,2025,18908655.0,,,,,,32
+Saint Vincent and the Grenadines,VCT,Americas,Latin America and the Caribbean,2024,100630.0,,,,,,32
+Zambia,ZMB,Africa,Sub-Saharan Africa,2024,21314962.0,,,,,,32
+Bahrain,BHR,Asia,Western Asia,2024,1607059.0,,,,,,32
+Bangladesh,BGD,Asia,Southern Asia,2025,175686904.0,,,,,,32
+Belgium,BEL,Europe,Western Europe,2025,11758601.0,,,,,,32
+Benin,BEN,Africa,Sub-Saharan Africa,2024,14462721.0,,,,,,32
+Bermuda,BMU,Americas,Northern America,2024,64660.0,,,,,,32
+Bosnia and Herzegovina,BIH,Europe,Southern Europe,2025,3140098.0,,,,,,32
+North Korea,PRK,Asia,Eastern Asia,2024,26498832.0,,,,,,32
+Mexico,MEX,Americas,Latin America and the Caribbean,2025,131946897.0,,,,,,32
+Morocco,MAR,Africa,Northern Africa,2025,38430774.0,,,,,,32
+Myanmar,MMR,Asia,South-eastern Asia,2024,54500086.0,,,,,,32
+Nepal,NPL,Asia,Southern Asia,2024,29651054.0,,,,,,32
+Netherlands,NLD,Europe,Western Europe,2025,18346823.0,,,,,,32
+New Caledonia,NCL,Oceania,Melanesia,2024,292655.0,,,,,,32
+Tonga,TON,Oceania,Polynesia,2024,104192.0,,,,,,32
+Costa Rica,CRI,Americas,Latin America and the Caribbean,2025,5152949.0,,,,,,32
+Czechia,CZE,Europe,Eastern Europe,2025,10609241.0,,,,,,32
+Spain,ESP,Europe,Southern Europe,2025,47889960.0,,,,,,32
+Aruba,ABW,Americas,Latin America and the Caribbean,2024,108076.0,,,,,,32
+Japan,JPN,Asia,Eastern Asia,2025,123103480.0,,,,,,32
+Lebanon,LBN,Asia,Western Asia,2024,5805962.0,,,,,,32
+Lesotho,LSO,Africa,Sub-Saharan Africa,2024,2337428.0,,,,,,32
+Russia,RUS,Europe,Eastern Europe,2025,143997393.0,,,,,,32
+French Polynesia,PYF,Oceania,Polynesia,2024,281816.0,,,,,,32
+Zimbabwe,ZWE,Africa,Sub-Saharan Africa,2024,16634366.0,,,,,,32
+Montenegro,MNE,Europe,Southern Europe,2025,632730.0,,,,,,32
+Nauru,NRU,Oceania,Micronesia,2024,11968.0,,,,,,32
+United Kingdom,GBR,Europe,Northern Europe,2025,69551334.0,,,,,,32
+Chile,CHL,Americas,Latin America and the Caribbean,2025,19859919.0,,,,,,32
+Croatia,HRV,Europe,Southern Europe,2025,3848164.0,,,,,,32
+Cyprus,CYP,Asia,Western Asia,2025,1370754.0,,,,,,32
+East Timor,TLS,Asia,South-eastern Asia,2024,1400638.0,,,,,,32
+Seychelles,SYC,Africa,Sub-Saharan Africa,2024,130436.0,,,,,,32
+Sierra Leone,SLE,Africa,Sub-Saharan Africa,2024,8642029.0,,,,,,32
+South Africa,ZAF,Africa,Sub-Saharan Africa,2025,64747319.0,,,,,,32
+Sri Lanka,LKA,Asia,Southern Asia,2025,23229474.0,,,,,,32
+Angola,AGO,Africa,Sub-Saharan Africa,2024,37885854.0,,,,,,32
+Bahamas,BHS,Americas,Latin America and the Caribbean,2024,401282.0,,,,,,32
+Kazakhstan,KAZ,Asia,Central Asia,2025,20843758.0,,,,,,32
+Laos,LAO,Asia,South-eastern Asia,2024,7769823.0,,,,,,32
+Liberia,LBR,Africa,Sub-Saharan Africa,2024,5612813.0,,,,,,32
+Lithuania,LTU,Europe,Northern Europe,2025,2830150.0,,,,,,32
+Peru,PER,Americas,Latin America and the Caribbean,2025,34576673.0,,,,,,32
+Saint Kitts and Nevis,KNA,Americas,Latin America and the Caribbean,2024,46867.0,,,,,,32
+Barbados,BRB,Americas,Latin America and the Caribbean,2024,282476.0,,,,,,32
+Belarus,BLR,Europe,Eastern Europe,2025,8997601.0,,,,,,32
+Bhutan,BTN,Asia,Southern Asia,2024,791530.0,,,,,,32
+Honduras,HND,Americas,Latin America and the Caribbean,2024,10825704.0,,,,,,32
+Israel,ISR,Asia,Western Asia,2025,9517182.0,,,,,,32
+Ethiopia,ETH,Africa,Sub-Saharan Africa,2025,135472048.0,,,,,,32
+Botswana,BWA,Africa,Sub-Saharan Africa,2024,2521145.0,,,,,,32
+Fiji,FJI,Oceania,Melanesia,2024,928800.0,,,,,,32
+Uruguay,URY,Americas,Latin America and the Caribbean,2025,3384686.0,,,,,,32
+Uzbekistan,UZB,Asia,Central Asia,2025,37053428.0,,,,,,32
+Colombia,COL,Americas,Latin America and the Caribbean,2025,53425629.0,,,,,,32
+Congo,COG,Africa,Sub-Saharan Africa,2024,6332969.0,,,,,,32
+Somalia,SOM,Africa,Sub-Saharan Africa,2024,19009155.0,,,,,,32
+Switzerland,CHE,Europe,Western Europe,2025,8967413.0,,,,,,32
+Taiwan,TWN,,,2025,23112797.0,,,,,,32
+Jordan,JOR,Asia,Western Asia,2024,11552885.0,,,,,,32
+Kiribati,KIR,Oceania,Micronesia,2024,134521.0,,,,,,32
+Kyrgyzstan,KGZ,Asia,Central Asia,2025,7295037.0,,,,,,32
+Latvia,LVA,Europe,Northern Europe,2025,1853560.0,,,,,,32
+Madagascar,MDG,Africa,Sub-Saharan Africa,2024,31964960.0,,,,,,32
+Panama,PAN,Americas,Latin America and the Caribbean,2024,4515576.0,,,,,,32
+Eswatini,SWZ,Africa,Sub-Saharan Africa,2024,1242829.0,,,,,,32
+Equatorial Guinea,GNQ,Africa,Sub-Saharan Africa,2024,1892523.0,,,,,,32
+Ghana,GHA,Africa,Sub-Saharan Africa,2024,34427417.0,,,,,,32
+Greece,GRC,Europe,Southern Europe,2025,9938847.0,,,,,,32
+Guinea-Bissau,GNB,Africa,Sub-Saharan Africa,2024,2201360.0,,,,,,32
+Haiti,HTI,Americas,Latin America and the Caribbean,2024,11772562.0,,,,,,32
+Guyana,GUY,Americas,Latin America and the Caribbean,2024,831092.0,,,,,,32
+Georgia,GEO,Asia,Western Asia,2025,3806669.0,,,,,,32
+Montserrat,MSR,Americas,Latin America and the Caribbean,2024,4414.0,,,,,,32
+Niger,NER,Africa,Sub-Saharan Africa,2024,27032417.0,,,,,,32
+Burkina Faso,BFA,Africa,Sub-Saharan Africa,2024,23548782.0,,,,,,32
+Vietnam,VNM,Asia,South-eastern Asia,2025,101598530.0,,,,,,32
+Chad,TCD,Africa,Sub-Saharan Africa,2024,20299131.0,,,,,,32
+Cook Islands,COK,Oceania,Polynesia,2024,13750.0,,,,,,32
+Solomon Islands,SLB,Oceania,Melanesia,2024,819206.0,,,,,,32
+Syria,SYR,Asia,Western Asia,2024,24672758.0,,,,,,32
+Tajikistan,TJK,Asia,Central Asia,2025,10786738.0,,,,,,32
+American Samoa,ASM,Oceania,Polynesia,2024,46792.0,,,,,,32
+Australia,AUS,Oceania,Australia and New Zealand,2025,26974024.0,,,,,,32
+Austria,AUT,Europe,Western Europe,2025,9113578.0,,,,,,32
+Kosovo,,,,2025,1674131.0,,,,,,32
+Pakistan,PAK,Asia,Southern Asia,2025,255219560.0,,,,,,32
+Palestine,PSE,Asia,Western Asia,2024,5495447.0,,,,,,32
+Bolivia,BOL,Americas,Latin America and the Caribbean,2025,12581847.0,,,,,,32
+Mongolia,MNG,Asia,Eastern Asia,2025,3517097.0,,,,,,32
+India,IND,Asia,Southern Asia,2025,1463865527.0,,,,,,32
+Gabon,GAB,Africa,Sub-Saharan Africa,2024,2538953.0,,,,,,32
+Nigeria,NGA,Africa,Sub-Saharan Africa,2025,237527788.0,,,,,,32
+Turks and Caicos Islands,TCA,Americas,Latin America and the Caribbean,2024,46563.0,,,,,,32
+Guinea,GIN,Africa,Sub-Saharan Africa,2024,14754779.0,,,,,,32
+Eritrea,ERI,Africa,Sub-Saharan Africa,2024,3535610.0,,,,,,32
+United States,USA,Americas,Northern America,2025,347275809.0,,,,,,32
+Cameroon,CMR,Africa,Sub-Saharan Africa,2024,29123748.0,,,,,,32
+Curacao,CUW,Americas,Latin America and the Caribbean,2024,185482.0,,,,,,32
+Democratic Republic of Congo,COD,Africa,Sub-Saharan Africa,2024,109276264.0,,,,,,32
+Dominican Republic,DOM,Americas,Latin America and the Caribbean,2025,11520483.0,,,,,,32
+Samoa,WSM,Oceania,Polynesia,2024,218031.0,,,,,,32
+Germany,DEU,Europe,Western Europe,2025,84075075.0,,,,,,32
+Serbia,SRB,Europe,Southern Europe,2025,6689038.0,,,,,,32
+South Sudan,SSD,Africa,Sub-Saharan Africa,2024,11943410.0,,,,,,32
+Antarctica,ATA,,,2023,,,0.1,,,,32
+Malawi,MWI,Africa,Sub-Saharan Africa,2024,21655288.0,,,,,,32
+Malaysia,MYS,Asia,South-eastern Asia,2025,35977834.0,,,,,,32
+Philippines,PHL,Asia,South-eastern Asia,2025,116786960.0,,,,,,32
