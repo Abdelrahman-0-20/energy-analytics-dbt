@@ -1,0 +1,67 @@
+name: ELT pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"   # weekly: catches pinned-source and toolchain drift
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch + load raw layer (pinned, idempotent)
+        run: python -m src.pipeline
+
+      - name: Loader tests
+        run: python -m pytest -q
+
+      - name: dbt deps
+        run: dbt deps --project-dir dbt --profiles-dir dbt
+
+      - name: dbt build — models + data tests
+        run: dbt build --project-dir dbt --profiles-dir dbt
+
+      - name: Prove idempotency — second build must change nothing
+        run: python scripts/prove_idempotency.py
+
+      - name: Source freshness
+        run: dbt source freshness --project-dir dbt --profiles-dir dbt
+
+      - name: dbt docs
+        run: dbt docs generate --project-dir dbt --profiles-dir dbt
+
+      - name: Upload docs site for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dbt/target
+
+  deploy-docs:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: pipeline
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
