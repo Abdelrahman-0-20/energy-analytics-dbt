@@ -1,0 +1,7 @@
+# dbt-duckdb pins dbt-core; duckdb is the local zero-ops warehouse.
+dbt-duckdb>=1.8,<2.0
+duckdb>=1.1,<2.0
+pytest>=8.0
+PyYAML>=6.0
+# dashboard only (CI installs it too — single requirements file keeps setup trivial)
+streamlit>=1.38

@@ -1,0 +1,77 @@
+# Pipeline configuration — sources, contracts, and paths live here, never in code.
+#
+# Both upstream URLs are pinned to commit SHAs so every run rebuilds the exact
+# same warehouse (reproducibility beats freshness for a portfolio project).
+# To bump the energy source:
+#   git ls-remote https://github.com/owid/energy-data.git refs/heads/master
+sources:
+  energy:
+    url: "https://raw.githubusercontent.com/owid/energy-data/f8de88a4f6f9cab44f1cf606047cbd6c4414042c/owid-energy-data.csv"
+    file: "data/raw/owid-energy-data.csv"
+    min_bytes: 1000000
+    # Data contract: the loader refuses to build on a file missing any of these.
+    # dbt models and macros depend on these exact names — drift must alert, never silently corrupt.
+    required_columns:
+      - country
+      - year
+      - iso_code
+      - population
+      - gdp
+      - primary_energy_consumption
+      - electricity_generation
+      - electricity_demand
+      - energy_per_capita
+      - carbon_intensity_elec
+      - greenhouse_gas_emissions
+      - renewables_share_energy
+      - low_carbon_share_energy
+      - fossil_share_energy
+      - coal_consumption
+      - coal_electricity
+      - coal_share_energy
+      - coal_share_elec
+      - oil_consumption
+      - oil_electricity
+      - oil_share_energy
+      - oil_share_elec
+      - gas_consumption
+      - gas_electricity
+      - gas_share_energy
+      - gas_share_elec
+      - nuclear_consumption
+      - nuclear_electricity
+      - nuclear_share_energy
+      - nuclear_share_elec
+      - hydro_consumption
+      - hydro_electricity
+      - hydro_share_energy
+      - hydro_share_elec
+      - wind_consumption
+      - wind_electricity
+      - wind_share_energy
+      - wind_share_elec
+      - solar_consumption
+      - solar_electricity
+      - solar_share_energy
+      - solar_share_elec
+      - biofuel_consumption
+      - biofuel_electricity
+      - biofuel_share_energy
+      - biofuel_share_elec
+      - other_renewable_consumption
+      - other_renewable_electricity
+      - other_renewables_share_energy
+      - other_renewables_share_elec
+  countries:
+    url: "https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/145f1ad3caff212ed25f42b0ee2c8b92a75af895/all/all.csv"
+    file: "data/raw/iso-3166-regional-codes.csv"
+    min_bytes: 5000
+    required_columns:
+      - name
+      - alpha-3
+      - region
+      - sub-region
+
+paths:
+  warehouse: "warehouse/energy.duckdb"
+  raw_dir: "data/raw"

@@ -1,0 +1,19 @@
+# environment
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# raw data is fetched fresh (pinned URLs) — never committed
+data/raw/*
+!data/raw/.gitkeep
+
+# local warehouse
+warehouse/*.duckdb
+warehouse/*.duckdb.wal
+
+# dbt artifacts
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+dbt/.user.yml   # dbt anonymous telemetry id — machine-local
