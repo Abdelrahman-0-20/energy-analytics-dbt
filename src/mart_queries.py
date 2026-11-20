@@ -15,7 +15,7 @@ QUERIES: dict[str, str] = {
                round(fossil_share_energy, 1)        as fossil_pct,
                energy_per_capita_rank
         from marts.mart_energy_snapshot
-        order by energy_per_capita_rank
+        order by energy_per_capita_rank, country   -- tiebreakers keep the CSV byte-stable
     """,
     "transition": """
         select entity_name as country, region,
@@ -23,13 +23,13 @@ QUERIES: dict[str, str] = {
                latest_year, round(latest_renewables_share_pct, 1)     as latest_pct,
                change_pp, renewables_rank
         from marts.mart_renewable_transition
-        order by change_pp desc
+        order by change_pp desc, country           -- deterministic ties
     """,
     "mix": """
         select entity_name as country, entity_type, year, energy_source,
                round(consumption_twh, 1) as twh
         from marts.mart_energy_mix
         where year >= 1965
-        order by year
+        order by year, country, energy_source      -- deterministic ties
     """,
 }
